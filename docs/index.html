@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chinese Step by Step</title>
+<meta name="description" content="Learn Mandarin Chinese from zero: pinyin, tones and hospital phrases. Explanations in English for Greek speakers.">
+<meta name="theme-color" content="#c8102e">
+<!-- 加到 iPhone 主屏幕后像 App 一样全屏打开 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="中文 Step">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <button class="back hidden" id="back" aria-label="Back">‹</button>
+  <h1 id="title">Chinese Step by Step</h1>
+  <button class="icon" id="slowBtn" aria-label="Slow audio" title="Slow audio">🐢</button>
+</header>
+<main id="view"></main>
+
+<!-- 给医生看：大字全屏 -->
+<div class="show hidden" id="show">
+  <div class="show-hz" id="showHz"></div>
+  <div class="show-py" id="showPy"></div>
+  <div class="show-en" id="showEn"></div>
+  <div class="show-btns">
+    <button class="btn big" id="showPlay">▶ Play</button>
+    <button class="btn big ghost" id="showClose">Close</button>
+  </div>
+</div>
+
+<!-- 跟读：录音并画出音高曲线 -->
+<div class="sheet hidden" id="rec">
+  <div class="sheet-box">
+    <div class="rec-hz" id="recHz"></div>
+    <div class="rec-py" id="recPy"></div>
+    <canvas id="recCanvas" width="600" height="220"></canvas>
+    <div class="rec-legend"><span class="lg ref">— model tone</span><span class="lg me">— your voice</span></div>
+    <div class="rec-msg" id="recMsg">Listen, then press ● and say it.</div>
+    <div class="rec-btns">
+      <button class="btn" id="recPlay">▶ Model</button>
+      <button class="btn rec" id="recGo">● Record</button>
+      <button class="btn ghost" id="recMine" disabled>▶ Mine</button>
+      <button class="btn ghost" id="recClose">Close</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast hidden" id="toast"></div>
+<script src="data/content.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

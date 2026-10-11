@@ -1,0 +1,6 @@
+_el_out/
+_el_try/
+_test/
+__pycache__/
+*.pyc
+.env
