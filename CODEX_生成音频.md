@@ -53,8 +53,10 @@
 
 6. **发布**：把 `docs\sw.js` 第一行的 `VERSION` 加 1（例如 `cs-v1` → `cs-v2`，让手机更新缓存），然后
    ```
-   git add -A && git commit -m "Add Mandarin audio (ElevenLabs)" && git push
+   git add -A && git commit -m "Add Mandarin audio (ElevenLabs)"
+   git -c credential.helper= -c "credential.helper=!gh auth git-credential" push
    ```
+   （仓库是 sunlightclaude/ChineseStepByStep；Windows 里存的 git 密码是另一个账号，所以推送时借用 gh 的登录。）
    GitHub Pages 会自动发布 `docs\` 目录，几分钟后手机上刷新就能听到录音。
 
 ## 注意
