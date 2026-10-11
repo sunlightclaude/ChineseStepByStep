@@ -166,7 +166,11 @@
     });
     const H = L.hanzi;
     html += `<h2>汉字 · ${esc(H.title)}</h2><div class="md">${md(H.md)}</div><div class="grid">`
-      + H.items.map((it) => { if (it.a) curItems[it.a] = it; return `<div class="snd" data-a="${it.a || ''}" data-hz="${esc(it.hz)}"><div class="hz">${esc(it.hz)}</div>`
+      + H.items.map((it) => {
+        // 笔画 / 偏旁不是字，不发音：显示名称（三点水 sāndiǎnshuǐ），没有播放按钮，点了也不读
+        if (it.part) return `<div class="snd part"><div class="hz">${esc(it.hz)}</div><div class="pname">${esc(it.name)}</div>`
+          + `<div class="py">${esc(it.py)}</div><div class="en">${esc(it.en)}</div>${it.note ? `<div class="en">${esc(it.note)}</div>` : ''}</div>`;
+        if (it.a) curItems[it.a] = it; return `<div class="snd" data-a="${it.a || ''}" data-hz="${esc(it.hz)}"><div class="hz">${esc(it.hz)}</div>`
         + `<div class="py">${esc(it.py)}</div><div class="en">${esc(it.en)}</div>${it.note ? `<div class="en">${esc(it.note)}</div>` : ''}`
         + (it.a ? '<div class="acts"><button data-play aria-label="Play">▶</button></div>' : '') + '</div>'; }).join('') + '</div>';
     const done = store.get('cs_done', []).includes(L.id);
@@ -363,7 +367,7 @@
   // ---------------------------------------------------------------- 点击
   document.addEventListener('click', (e) => {
     const g = e.target.closest('[data-go]'); if (g) { go(g.dataset.go); return; }
-    const card = e.target.closest('.snd, .snd-lite');
+    const card = e.target.closest('.snd:not(.part), .snd-lite');     // 偏旁 / 笔画卡片点了不发音
     if (e.target.closest('[data-rec]') && card) { const it = curItems[card.dataset.a]; if (it) { play(it.a, it.hz); openRec(it); } return; }
     if (card) { const it = curItems[card.dataset.a]; play(card.dataset.a || null, it ? it.hz : card.dataset.hz, card); return; }
     const s = e.target.closest('[data-say]'); if (s) { const it = curItems[s.dataset.say]; if (it) play(it.a, it.hz); return; }

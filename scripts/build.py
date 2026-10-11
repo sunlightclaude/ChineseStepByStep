@@ -52,9 +52,16 @@ def build():
                 blocks.append({'t': 'sounds', 'title': data['title'], 'drill': data['drill'], 'items': [
                     {'py': p, 'hz': h, 'en': e, 'tone': tone_of(p), 'a': aid(h, py=p, en=e)} for p, h, e in data['items']]})
         hz = L['hanzi']
-        hanzi = {'title': hz['title'], 'md': hz['text'], 'items': [
-            {'hz': c, 'py': p, 'en': e, 'note': n, 'a': aid(c, py=p, en=e) if len(c) == 1 and '一' <= c <= '鿿' else None}
-            for c, p, e, n in hz['items']]}
+        items = []
+        for t in hz['items']:
+            if t[0] == 'part':
+                # 笔画 / 偏旁：不是字，不发音；显示它的名称（横、三点水、走之旁……）
+                _, sym, name, name_py, e, n = t
+                items.append({'hz': sym, 'part': True, 'name': name, 'py': name_py, 'en': e, 'note': n, 'a': None})
+            else:
+                c, p, e, n = t
+                items.append({'hz': c, 'py': p, 'en': e, 'note': n, 'a': aid(c, py=p, en=e)})
+        hanzi = {'title': hz['title'], 'md': hz['text'], 'items': items}
         lessons.append({'id': L['id'], 'title': L['title'], 'zh': L['zh'], 'goal': L['goal'], 'blocks': blocks, 'hanzi': hanzi})
 
     groups = []

@@ -122,3 +122,7 @@ h3 { font-size: 16px; margin: 18px 0 8px; color: var(--muted); font-weight: 600;
 .toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 40; background: rgba(20,20,20,.9); color: #fff; padding: 9px 16px; border-radius: 18px; font-size: 14px; max-width: 90vw; text-align: center; }
 /* 大字页面始终是白底，按钮颜色固定，不随深色模式变 */
 .show .btn.ghost { background: #eeeeee; color: #111111; border-color: #dddddd; }
+
+/* 偏旁、笔画：显示名称，不发音 */
+.snd.part .pname { font-size: 18px; font-weight: 700; color: var(--accent); font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif; }
+.snd.part .py { font-size: 14px; font-weight: 500; color: var(--muted); }

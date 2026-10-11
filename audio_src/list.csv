@@ -89,8 +89,6 @@ a4f54b3bef9,female,炒。,chǎo,to stir-fry
 aa20273a869,female,次。,cì,time (occurrence)
 ab22d4e347e,female,擦。,cā,to wipe
 a241c33afee,female,草。,cǎo,grass
-a3b2837bac0,female,艹。,cǎo,grass; plant
-adb9e5bb5cf,female,丶。,diǎn,dot 点
 a07f0046b46,female,对。,duì,correct
 a38e12d17d4,female,大。,dà,big
 ae20d44075c,female,肚。,dù,belly
@@ -118,7 +116,6 @@ a2d027636f1,female,九。,jiǔ,nine
 ae03c37ab83,female,急诊,jízhěn,Emergency
 ada86445f90,female,句。,jù,sentence
 a9dbed58053,female,鸡。,jī,chicken
-a0e7f76fd94,female,钅。,jīn,metal
 abb9fa4b3e9,female,快。,kuài,fast
 ab8c2771a66,female,科。,kē,department
 a7bade2c9e4,female,口。,kǒu,mouth
@@ -130,10 +127,8 @@ a5e5a718a6f,female,零。,líng,zero
 a693628a03e,female,冷。,lěng,cold
 a5b2a770485,female,里。,lǐ,inside
 ac637aa8754,female,绿。,lǜ,green
-ae91c23f8e0,female,宀。,mián,roof
 ae5df730ab9,female,骂。,mà,to scold
 ada45b1b7f5,female,麻。,má,hemp
-a8b0eef6f41,female,木。,mù,tree; wood
 ac83d11065c,female,妈。,mā,mother
 a4ea026fe12,female,妈妈,māma,mum
 a69a647f342,female,马。,mǎ,horse
@@ -142,7 +137,6 @@ a3ebcfbf748,female,哪儿,nǎr,where
 a17cc524de0,female,你。,nǐ,you
 af9f1954ef1,female,你好,nǐ hǎo,hello
 a97f7265ff5,female,女。,nǚ,woman
-a053cab33ba,female,丿。,piě,left-falling stroke 撇
 a5699652d20,female,皮肤,pífū,skin
 a1690b426b2,female,铺。,pù,shop
 a9614107b96,female,趴。,pā,to lie on stomach
@@ -152,21 +146,16 @@ a4753555cfa,female,墙。,qiáng,wall
 a454c478ea8,female,去。,qù,to go
 a489ab0f3e5,female,七。,qī,seven
 a89e2229ad2,female,人。,rén,person
-ae9595c344d,female,亻。,rén,person
 a2ec9049e78,female,日。,rì,sun; day
 a1a020de44e,female,肉。,ròu,meat
 a59fbf90250,female,水。,shuǐ,water
-aec95e8257b,female,氵。,shuǐ,water
 a37ab5ad39a,female,是。,shì,to be
 a3c574ecaae,female,十。,shí,ten
-a6bcbb15a6e,female,饣。,shí,food
-a5c4f3637b9,female,丨。,shù,vertical stroke 竖
 a972e30a18d,female,山。,shān,mountain
 aac6528f9ed,female,伤。,shāng,wound
 a6446eccfdd,female,诗。,shī,poem
 ad321803ff9,female,收费处,shōufèichù,Cashier / Payment
 aced72c22b0,female,少。,shǎo,few
-a11860ee8a2,female,扌。,shǒu,hand
 a975a1d0775,female,手。,shǒu,hand
 a7fb15087c9,female,四。,sì,four
 a05b03f1156,female,三。,sān,three
@@ -197,7 +186,6 @@ afd79cf48ec,female,月。,yuè,moon; month
 a13296c5353,female,药房,yàofáng,Pharmacy
 abcbce13f35,female,牙。,yá,tooth
 a5f37ecd3be,female,牙科,yákē,Dentistry
-ada108a3bb2,female,讠。,yán,speech
 a9ddd9f9f96,female,亿。,yì,hundred million
 ad3a25b43dc,female,一天,yì tiān,one day
 a7f90c5d6ee,female,一起,yìqǐ,together
@@ -221,7 +209,6 @@ af46794cb2c,female,嘴。,zuǐ,mouth
 adc4bf05f73,female,字。,zì,character
 a4a1cd1b6f6,female,早。,zǎo,early
 af678a0abb3,female,子。,zǐ,child
-aca50fbcf4c,female,辶。,zǒu,walking
 a56609115dc,female,爱。,ài,to love
 a88b8deabe2,female,饿。,è,hungry
 ad70a2c0470,female,二。,èr,two

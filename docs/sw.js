@@ -1,5 +1,5 @@
 // 离线：页面和数据先缓存；录音第一次播放时缓存，以后不联网也能听。改了文件就把 VERSION 加 1。
-const VERSION = 'cs-v1';
+const VERSION = 'cs-v2';
 const SHELL = ['./', 'index.html', 'style.css', 'app.js', 'data/content.js', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];
 
